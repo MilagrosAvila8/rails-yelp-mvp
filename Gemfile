@@ -2,6 +2,10 @@ source "https://rubygems.org"
 
 ruby "3.1.2"
 
+#simple form, luego se ejecuta en la termina:
+#bundle install
+#rails generate simple_form:install --bootstrap
+gem "simple_form"
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.1.4"
 
