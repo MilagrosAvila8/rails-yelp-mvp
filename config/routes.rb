@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
@@ -9,10 +10,12 @@ Rails.application.routes.draw do
   # root "posts#index"
   get "restaurants", to: "restaurants#index"
   #agregar nuevo restaurant
-  get "restaurants/new", to: "restaurants#new"
+  get "restaurants/new", to: "restaurants#new", as: :new_restaurant
   post "restaurants", to: "restaurants#create"
   #mostrar 1 restaurant
-  get "restaurants/:id", to: "restaurants#show"
+  get "restaurants/:id", to: "restaurants#show", as: :restaurant
 
-
+  resources :restaurants do
+    resources :reviews, only: [:new, :create]
+  end
 end

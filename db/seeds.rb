@@ -8,7 +8,7 @@
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
 puts 'creating restaurants...'
-central = { name: 'central', address: 'barranco', phone_number: '123', category: 'italian'}
+central = { name: 'central', address: 'barranco', phone_number: '123', category: 'italian' }
 cosme = { name: 'cosme', address: 'miraflores', phone_number: '456', category: 'french' }
 xinua = { name: 'xinua', address: 'san isidro', phone_number: '789', category: 'italian' }
 titi = { name: 'titi', address: 'san borja', phone_number: '234', category: 'french' }
